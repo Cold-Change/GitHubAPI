@@ -1,0 +1,22 @@
+version: 2.1
+
+jobs:
+  test_github_api:
+    docker:
+      - image: cimg/python:3.7.12
+    steps:
+      - checkout
+      - run:
+          name: Install pytest
+          command: pip install pytest
+      - run:
+          name: Install requests import
+          command: pip install requests
+      - run:
+          name: "Test GitHub API"
+          command: "pytest testing_github_api.py"
+
+workflows:
+  github_api_workflow:
+    jobs:
+      - test_github_api
