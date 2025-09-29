@@ -1,8 +1,8 @@
 import requests
 import json
 
-def main():
-    github_api("richkempinski") # Provided example repository
+# def main():
+#     github_api("richkempinski") # Provided example repository
     # github_api("Cold-Change") # My repository
 
 def github_api(username):
@@ -48,5 +48,5 @@ def test_github_api():
     else:
         print(f"Failed to retrieve data.")
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()
